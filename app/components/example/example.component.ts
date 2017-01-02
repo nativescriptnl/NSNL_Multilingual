@@ -1,6 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {Location} from "@angular/common";
-var utilityModule = require("utils/utils");
+
+import {TranslateService} from 'ng2-translate';
+
 
 @Component({
     selector: "example",
@@ -9,18 +11,22 @@ var utilityModule = require("utils/utils");
 
 export class ExampleComponent implements OnInit {
 
-    public constructor(private location: Location) {
+    public constructor(private location: Location, private translate: TranslateService) {
     }
 
     public ngOnInit() {
+        this.translate.addLangs(["en", "nl"]);
+        this.translate.setDefaultLang('en');
+        let browserLang = this.translate.getBrowserLang();
+        this.translate.use(browserLang.match(/en|nl/) ? browserLang : 'en');
     }
 
     public goBack() {
         this.location.back();
     }
 
-    public launchWebsite() {
-        utilityModule.openUrl("https://www.nativescript.nl");
+    public changeLanguage(lang: string) {
+        this.translate.use(lang);
     }
 
 }
