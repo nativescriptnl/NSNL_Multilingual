@@ -7,7 +7,7 @@
             <Image class="picture" src="~/assets/images/nativescript-nl.png"></Image>
         </StackLayout>
         <StackLayout class="page">
-            <Label class="header" text="{{ 'EXAMPLE.TITLE' | translate }}"></Label>
+            <Label class="header" [text]="'EXAMPLE.TITLE' | translate"></Label>
             <TextView class="text" editable="false" text="This is a sample test page from NativeScript NL, a website curated by Rowdy Rabouw, webdeveloper from The Netherlands."></TextView>
             <Button class="button" text="English" (tap)="changeLanguage('en')"></Button>
             <Button class="button" text="Nederlands" (tap)="changeLanguage('nl')"></Button>

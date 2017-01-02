@@ -15,10 +15,7 @@ export class ExampleComponent implements OnInit {
     }
 
     public ngOnInit() {
-        this.translate.addLangs(["en", "nl"]);
-        this.translate.setDefaultLang('en');
-        let browserLang = this.translate.getBrowserLang();
-        this.translate.use(browserLang.match(/en|nl/) ? browserLang : 'en');
+        
     }
 
     public goBack() {
