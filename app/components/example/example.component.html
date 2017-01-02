@@ -1,0 +1,15 @@
+<ActionBar title="Example" class="actionbar">
+    <NavigationButton text="Back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<ScrollView class="page-wrapper">
+    <StackLayout>
+        <StackLayout class="picture-wrapper">
+            <Image class="picture" src="~/assets/images/nativescript-nl.png"></Image>
+        </StackLayout>
+        <StackLayout class="page">
+            <Label class="header" text="Hello world!"></Label>
+            <TextView class="text" editable="false" text="This is a sample test page from NativeScript NL, a website curated by Rowdy Rabouw, webdeveloper from The Netherlands."></TextView>
+            <Button class="button" text="Visit website" (tap)="launchWebsite()"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>
