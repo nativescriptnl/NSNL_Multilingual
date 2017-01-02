@@ -1,4 +1,5 @@
 .idea
+*.js
 lib
 node_modules
 platforms/android
