@@ -5,8 +5,8 @@ For more information please refer to the article "[How to create a multilingual 
 ####Instructions
 
 ```
-git clone --depth 1 https://github.com/nativescriptnl/NSNL_Multilingual NSNL_Multilingual
-cd NSNL_Multilingual
+git clone --depth 1 https://github.com/nativescriptnl/NSNL_Multilingual projectname
+cd projectname
 rm -rf .git
 git init
 npm install
