@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 
+import * as Platform from "platform";
 import {TranslateService} from 'ng2-translate';
 
 @Component({
@@ -9,14 +10,7 @@ import {TranslateService} from 'ng2-translate';
 export class AppComponent {
 
     constructor(private translate: TranslateService) {
-        translate.addLangs(["en", "nl"]);
-        translate.setDefaultLang('en');
-
-        // IMPORTANT: There is no Browser in NativeScript, therefore you cannot use any browser based api's etc. - REMOVE THIS
-        // You would set the language default explicitly above via default lang you want to start the app with
-        // Then allow users to set their own default language in the app and persist their choice to preserve and set again everytime they relaunch the app
-        
-        // let browserLang = this.translate.getBrowserLang();
-        // this.translate.use(browserLang.match(/en|nl/) ? browserLang : 'en');
+        this.translate.setDefaultLang("nl");
+        this.translate.use(Platform.device.language);
     }
 }

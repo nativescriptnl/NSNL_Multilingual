@@ -1,5 +1,5 @@
-<ActionBar title="Example" class="actionbar">
-    <NavigationButton text="Back" (tap)="goBack()"></NavigationButton>
+<ActionBar [title]="'EXAMPLE.TITLE' | translate" class="actionbar">
+    <NavigationButton [text]="'EXAMPLE.BACK' | translate" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 <ScrollView class="page-wrapper">
     <StackLayout>
@@ -8,9 +8,9 @@
         </StackLayout>
         <StackLayout class="page">
             <Label class="header" [text]="'EXAMPLE.TITLE' | translate"></Label>
-            <TextView class="text" editable="false" text="This is a sample test page from NativeScript NL, a website curated by Rowdy Rabouw, webdeveloper from The Netherlands."></TextView>
-            <Button class="button" text="English" (tap)="changeLanguage('en')"></Button>
+            <TextView class="text" editable="false" [text]="'EXAMPLE.TEXT' | translate"></TextView>
             <Button class="button" text="Nederlands" (tap)="changeLanguage('nl')"></Button>
+            <Button class="button" text="English" (tap)="changeLanguage('en')"></Button>
         </StackLayout>
     </StackLayout>
 </ScrollView>

@@ -7,11 +7,11 @@ import {AppRoutes, AppComponents} from "./app.routing";
 
 import {AppComponent} from "./app.component";
 
-import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
+import {TranslateModule, TranslateLoader, TranslateStaticLoader} from "ng2-translate";
 
 // for AoT compilation
 export function translateLoaderFactory(http: Http) {
-  return new TranslateStaticLoader(http, '/i18n', '.json');
+  return new TranslateStaticLoader(http, "/i18n", ".json");
 };
 
 @NgModule({
