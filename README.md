@@ -13,3 +13,5 @@ npm install
 tns platform add ios
 tns livesync ios --watch
 ```
+
+![screenshots](img/nsnl_multilingual.gif)
